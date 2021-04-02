@@ -1,0 +1,39 @@
+<!doctype HTML>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" type="text/css" href="/css/signup.css">
+    <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="main-container">
+    <div class="main-wrap">
+        <header>
+
+            <div class="logo-wrap">
+                <img src="/img/mainlogo.png">
+            </div>
+        </header>
+        <form action="/user/signup" method="post">
+            <section class="signup-input-section-wrap">
+            <div class="signup-input-wrap">
+                <input placeholder="Username" type="text" name="username"></input>
+            </div>
+            <div class="signup-input-wrap password-wrap">
+                <input placeholder="Password" type="password" name="password"></input>
+            </div>
+            <div class="signup-input-wrap password-wrap">
+                <input placeholder="Email" type="email" name="email"></input>
+            </div>
+            <div class="signup-button-wrap">
+                <button>Sign up</button>
+            </div>
+
+
+    </div>
+</div>
+</body>
+</html>

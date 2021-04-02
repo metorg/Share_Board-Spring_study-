@@ -1,0 +1,54 @@
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="basic.js"></script>
+    <script>
+        $( document ).ready(function() {
+            let sPageURL = window.location.search.substring(1);
+            let sURLVariables = sPageURL.split('&');
+
+            for (let i = 0; i < sURLVariables.length; i++)
+            {
+                let sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == 'id')
+                {
+                    getDetail(sParameterName[1]);
+                }
+            }
+        });
+
+
+
+
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div id="wrapper"  class="min">
+    <span id ="login_name" th:text="${username}"></span>
+    <div id="boardView" class="boardView">
+
+
+    </div >
+    <div id="reply_input_array">
+    <textarea id="reply_input" class="reply_input" placeholder="입력해 주세요"> </textarea>
+    <button class="reply_input_button" onclick="writeReply()">등록</button>
+    </div>
+    <hr>
+    <div id="reply_list_box">
+        <div class="reply_list_top" id="reply_list_top">
+            <div class="reply_contents">내용</div>
+            <div class="reply_date">날짜</div>
+            <div class="reply_name">이름 </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

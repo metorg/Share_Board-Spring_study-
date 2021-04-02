@@ -1,0 +1,47 @@
+
+#wrapper{width:100%; margin:80px auto 100px; max-width: 538px;}
+
+.min{min-height: 700px;}
+
+.boardView{
+    color:black;
+}
+.view_title{
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 20px;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #ddd;
+    background: #fdf9eb;
+}
+.view_title .title{width: 100%; font-size: 17px; font-weight: 700; margin-bottom:5px;  color: #111;}
+.view_title .name{display: inline-block; font-size:13px; margin-right:5px; color: #777; }
+.view_title .name:after{content: ''; width:1px; height:10px; background: #ddd; float:right; margin-left: 10px; margin-top: 5px;}
+.view_title .date{display: inline-block; font-size:13px; color: #777;}
+.icon-start-edit{ display:inline-block; float:right;}
+.view_cont{display: block; width: 100%; padding: 20px 10px;}
+.view_cont .text{font-size:14px; line-height: 1.7; color:#555;}
+.reply_input{
+    display:block;
+    margin-top:40px;
+}
+.reply_input_array .reply_input_button{
+    display: inline-block;
+
+}
+.reply_list_top .reply_name{
+
+    display:inline-block;
+    width:15%;
+}
+.reply_list_top .reply_contents{
+
+    display:inline-block;
+    width:40%;
+
+}
+.reply_list_top .reply_date{
+    display:inline-block;
+    width:15%;
+}

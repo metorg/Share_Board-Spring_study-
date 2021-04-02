@@ -1,0 +1,58 @@
+<!doctype HTML>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>로그인</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="main-wrap">
+        <header>
+
+            <div class="logo-wrap">
+                <img src="/img/mainlogo.png">
+            </div>
+
+        </header>
+
+        <section class="login-input-section-wrap">
+            <div th:if="${loginError}" class="alert alert-danger" role="alert">로그인에 실패하였습니다.</div>
+            <form action="/user/login" method="post">
+            <div class="login-input-wrap">
+                <input placeholder="Username" name="username" class="login-input-box" type="text"></input>
+            </div>
+            <div class="login-input-wrap password-wrap">
+                <input placeholder="Password" name="password" class="login-input-box" type="password"></input>
+            </div>
+            <div class="login-button-wrap">
+                <button id="login-id-submit">Sign in</button>
+            </div>
+            <div class="login-stay-sign-in">
+                <i class="far fa-check-circle"></i>
+                <span>Stay Signed in</span>
+            </div>
+        </section>
+        </form>
+        <section class="Easy-sgin-in-wrap">
+            <h2>Easier sign in</h2>
+            <ul class="sign-button-list">
+                <li><button onclick="location.href='/user/signup'"><i class="fas fa-user-edit" ></i><span>Sing up</span></button></li>
+                <li><button onclick="location.href='https://kauth.kakao.com/oauth/authorize?client_id=fed577c3f35b1bb0ff5add36820eb67b&redirect_uri=http://54.180.114.220/user/kakao/callback&response_type=code'"><i class="iconify" data-icon="vs-kakaotalk" ></i><span> Kakao</span></button></li>
+
+            </ul>
+            <p class="forget-msg">Forgot your Username or Password? | Sign up</p>
+        </section>
+
+
+    </div>
+</div>
+</body>
+</html>
